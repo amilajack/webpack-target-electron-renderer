@@ -1,13 +1,11 @@
-'use strict';
+
 
 const webpack = require('webpack');
 const FunctionModulePlugin = require('webpack/lib/FunctionModulePlugin');
 const NodeTargetPlugin = require('webpack/lib/node/NodeTargetPlugin');
 
-const { LoaderTargetPlugin, ExtendedAPIPlugin, ExternalsPlugin } = webpack;
+const { LoaderTargetPlugin, ExternalsPlugin } = webpack;
 const { JsonpTemplatePlugin } = webpack.web;
-
-console.log(ExternalsPlugin)
 
 module.exports = function (options) {
   return function webpackTargetElectronRenderer(compiler) {
@@ -26,9 +24,9 @@ module.exports = function (options) {
         'clipboard',
         'crash-reporter',
         'screen',
-        'shell'
+        'shell',
       ]),
-      new LoaderTargetPlugin(options.target)
+      new LoaderTargetPlugin(options.target),
     );
   };
 };
