@@ -1,11 +1,13 @@
 'use strict';
 
-var webpack = require('webpack');
-var JsonpTemplatePlugin = webpack.JsonpTemplatePlugin;
-var FunctionModulePlugin = require('webpack/lib/FunctionModulePlugin');
-var NodeTargetPlugin = require('webpack/lib/node/NodeTargetPlugin');
-var ExternalsPlugin = webpack.ExternalsPlugin;
-var LoaderTargetPlugin = webpack.LoaderTargetPlugin;
+const webpack = require('webpack');
+const FunctionModulePlugin = require('webpack/lib/FunctionModulePlugin');
+const NodeTargetPlugin = require('webpack/lib/node/NodeTargetPlugin');
+
+const { LoaderTargetPlugin, ExtendedAPIPlugin, ExternalsPlugin } = webpack;
+const { JsonpTemplatePlugin } = webpack.web;
+
+console.log(ExternalsPlugin)
 
 module.exports = function (options) {
   return function webpackTargetElectronRenderer(compiler) {

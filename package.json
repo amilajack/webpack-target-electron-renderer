@@ -28,15 +28,15 @@
     "electron-renderer"
   ],
   "dependencies": {
-    "webpack": "^1.12.14"
+    "webpack": "^4.20.2"
   },
   "devDependencies": {
-    "babel-eslint": "^6.0.2",
-    "chai": "^3.5.0",
-    "eslint": "^2.5.3",
-    "eslint-config-airbnb": "6.2.0",
-    "istanbul": "^0.4.2",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "17.1.0",
+    "istanbul": "^0.4.5",
     "mocha": "*",
-    "sinon": "^1.17.3"
+    "sinon": "^6.3.5"
   }
 }

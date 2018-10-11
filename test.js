@@ -1,14 +1,14 @@
 'use strict';
 
-var expect = require('chai').expect;
-var spy = require('sinon').spy;
-var webpackTargetElectronRenderer = require('./');
-var webpack = require('webpack');
-var JsonpTemplatePlugin = webpack.JsonpTemplatePlugin;
-var FunctionModulePlugin = require('webpack/lib/FunctionModulePlugin');
-var NodeTargetPlugin = require('webpack/lib/node/NodeTargetPlugin');
-var ExternalsPlugin = webpack.ExternalsPlugin;
-var LoaderTargetPlugin = webpack.LoaderTargetPlugin;
+const expect = require('chai').expect;
+const spy = require('sinon').spy;
+const webpackTargetElectronRenderer = require('./');
+const webpack = require('webpack');
+const JsonpTemplatePlugin = webpack.web.JsonpTemplatePlugin;
+const FunctionModulePlugin = require('webpack/lib/FunctionModulePlugin');
+const NodeTargetPlugin = require('webpack/lib/node/NodeTargetPlugin');
+const ExternalsPlugin = webpack.ExternalsPlugin;
+const LoaderTargetPlugin = webpack.LoaderTargetPlugin;
 
 
 it('should return a function', function () {
