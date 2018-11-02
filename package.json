@@ -5,9 +5,9 @@
   "license": "MIT",
   "repository": "chentsulin/webpack-target-electron-renderer",
   "scripts": {
-    "lint": "eslint .",
-    "test": "mocha",
-    "test-travis": "node node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --reporter dot"
+    "lint": "eslint index.js test.js",
+    "test": "yarn lint && jest .",
+    "test-travis": "yarn test --coverage"
   },
   "author": {
     "name": "C.T. Lin",
@@ -28,16 +28,16 @@
     "electron-renderer"
   ],
   "dependencies": {
-    "webpack": "^4.20.2"
+    "webpack": "^4.24.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "chai": "^4.2.0",
-    "eslint": "^5.6.1",
+    "eslint": "^5.8.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "istanbul": "^0.4.5",
-    "mocha": "*",
-    "sinon": "^6.3.5"
+    "jest": "^23.6.0",
+    "sinon": "^7.1.1"
   }
 }

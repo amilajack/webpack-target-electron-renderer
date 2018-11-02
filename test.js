@@ -1,5 +1,3 @@
-
-
 const { expect } = require('chai');
 const { spy } = require('sinon');
 const webpack = require('webpack');
@@ -11,7 +9,6 @@ const webpackTargetElectronRenderer = require('./');
 
 const { ExternalsPlugin } = webpack;
 const { LoaderTargetPlugin } = webpack;
-
 
 it('should return a function', () => {
   expect(webpackTargetElectronRenderer({})).to.be.a('function');
